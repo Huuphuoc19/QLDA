@@ -32,13 +32,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhanVienPNSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thucHienDeAnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nHANVIENVIEWNSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new QLDA.DataSet1();
             this.nHANVIEN_VIEW_NSTableAdapter = new QLDA.DataSet1TableAdapters.NHANVIEN_VIEW_NSTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nHANVIENVIEWNSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet3 = new QLDA.DataSet3();
-            this.nHANVIEN_VIEW_NSTableAdapter1 = new QLDA.DataSet3TableAdapters.NHANVIEN_VIEW_NSTableAdapter();
             this.mANVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hONVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tENLOTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +49,10 @@
             this.pHGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHUCAPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editCol = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.nHANVIENVIEWNSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet3 = new QLDA.DataSet3();
+            this.nHANVIEN_VIEW_NSTableAdapter1 = new QLDA.DataSet3TableAdapters.NHANVIEN_VIEW_NSTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENVIEWNSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -63,7 +65,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhanVienToolStripMenuItem,
-            this.nhanVienPNSToolStripMenuItem});
+            this.nhanVienPNSToolStripMenuItem,
+            this.thucHienDeAnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(734, 24);
@@ -82,6 +85,13 @@
             this.nhanVienPNSToolStripMenuItem.Name = "nhanVienPNSToolStripMenuItem";
             this.nhanVienPNSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.nhanVienPNSToolStripMenuItem.Text = "Nhan vien PNS";
+            // 
+            // thucHienDeAnToolStripMenuItem
+            // 
+            this.thucHienDeAnToolStripMenuItem.Name = "thucHienDeAnToolStripMenuItem";
+            this.thucHienDeAnToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.thucHienDeAnToolStripMenuItem.Text = "Thuc hien de an";
+            this.thucHienDeAnToolStripMenuItem.Click += new System.EventHandler(this.thucHienDeAnToolStripMenuItem_Click);
             // 
             // nHANVIENVIEWNSBindingSource
             // 
@@ -122,20 +132,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(713, 303);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // nHANVIENVIEWNSBindingSource1
-            // 
-            this.nHANVIENVIEWNSBindingSource1.DataMember = "NHANVIEN_VIEW_NS";
-            this.nHANVIENVIEWNSBindingSource1.DataSource = this.dataSet3;
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nHANVIEN_VIEW_NSTableAdapter1
-            // 
-            this.nHANVIEN_VIEW_NSTableAdapter1.ClearBeforeFill = true;
             // 
             // mANVDataGridViewTextBoxColumn
             // 
@@ -218,10 +214,34 @@
             this.editCol.Text = "Update";
             this.editCol.UseColumnTextForButtonValue = true;
             // 
+            // nHANVIENVIEWNSBindingSource1
+            // 
+            this.nHANVIENVIEWNSBindingSource1.DataMember = "NHANVIEN_VIEW_NS";
+            this.nHANVIENVIEWNSBindingSource1.DataSource = this.dataSet3;
+            // 
+            // dataSet3
+            // 
+            this.dataSet3.DataSetName = "DataSet3";
+            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nHANVIEN_VIEW_NSTableAdapter1
+            // 
+            this.nHANVIEN_VIEW_NSTableAdapter1.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(277, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 21);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Thông tin nhân viên";
+            // 
             // NhanVienPNS1aForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "NhanVienPNS1aForm";
@@ -262,5 +282,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pHGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pHUCAPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn editCol;
+        private System.Windows.Forms.ToolStripMenuItem thucHienDeAnToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -187,5 +187,47 @@ namespace DAO
             }
             return false;
         }
+
+        public static DataTable getInfoThucHienDeAn()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.THUC_HIEN_DE_AN_V";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static DataTable getInfoNhanVienTP()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.NHAN_VIEN_1a_v";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static DataTable getInfoNhanVienDeAnTP()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.THUC_HIEN_DA_TP_V";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
     }
 }

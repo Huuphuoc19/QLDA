@@ -52,5 +52,12 @@ namespace QLDA
             NhanVienPNS1aForm nhanVienPNS1aForm = new NhanVienPNS1aForm();
             nhanVienPNS1aForm.Show();
         }
+
+        private void thucHienDeAnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ThucHienDeAnForm thucHienDeAnForm = new ThucHienDeAnForm();
+            thucHienDeAnForm.Show();
+        }
     }
 }

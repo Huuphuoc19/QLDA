@@ -140,6 +140,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThucHienDeAnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThucHienDeAnForm.Designer.cs">
+      <DependentUpon>ThucHienDeAnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThucHienDeAnTPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThucHienDeAnTPForm.Designer.cs">
+      <DependentUpon>ThucHienDeAnTPForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongPhongNotNSForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThucHienDeAnForm.resx">
+      <DependentUpon>ThucHienDeAnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThucHienDeAnTPForm.resx">
+      <DependentUpon>ThucHienDeAnTPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongPhongNotNSForm.resx">
+      <DependentUpon>TruongPhongNotNSForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

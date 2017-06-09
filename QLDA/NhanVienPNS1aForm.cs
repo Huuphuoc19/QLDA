@@ -57,5 +57,12 @@ namespace QLDA
                 MessageBox.Show("Error");
             }
         }
+
+        private void thucHienDeAnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ThucHienDeAnForm thucHienDeAnForm = new ThucHienDeAnForm();
+            thucHienDeAnForm.Show();
+        }
     }
 }

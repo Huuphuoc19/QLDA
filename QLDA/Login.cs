@@ -88,8 +88,8 @@ namespace QLDA
                         case Base.TRG_PHONG_NOT_NS:
                             {
                                 this.Hide();
-                                TruongPTHDAForm truongPTHDAForm = new TruongPTHDAForm();
-                                truongPTHDAForm.Show();
+                                TruongPhongNotNSForm truongPhongNotNSForm = new TruongPhongNotNSForm();
+                                truongPhongNotNSForm.Show();
                             }
                             break;
                         default:
