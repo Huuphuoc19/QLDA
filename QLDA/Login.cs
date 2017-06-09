@@ -31,7 +31,7 @@ namespace QLDA
                 try
                 {
                     conn.Open();
-
+                    MessageBox.Show(NhanVien.getRoleNhanVien(userName));
                     switch (NhanVien.getRoleNhanVien(userName))
                     {
                         case Base.DBA:

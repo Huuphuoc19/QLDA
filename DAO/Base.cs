@@ -17,6 +17,7 @@ namespace DAO
         public const string NV_PKD = "NV_PHONG_KD";
         public const string NV_PTHKH = "NV_PTHKH";
         public const string TRG_PHONG_NOT_NS = "TRUONG_PHONG_NO_NS";
+        public const string NV = "NHAN_VIEN";
 
         private static string daConnectionString = "User Id=DA;Password=123;Data Source=localhost:1521/orcl;";
 

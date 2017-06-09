@@ -11,12 +11,12 @@ namespace DAO
 {
     public class NhanVien
     {
-        private const string GIAM_DOC = "NV111";
+        private const string GIAM_DOC = "NV02";
         private const string DBA = "da";
         private const string PNS = "HR";
-        private const string PHONG_THDA = "Finance";
-        private const string PHONG_KD = "Marketing";
-        private const string PHONG_THKH = "Consulting";
+        private const string PHONG_THDA = "Thuc hien de an";
+        private const string PHONG_KD = "Kinh doanh";
+        private const string PHONG_THKH = "Thuc hien ke hoach";
   
 
         public static DataTable getAllNhanVien()
@@ -104,7 +104,7 @@ namespace DAO
                 }
                 
             }
-            return "SOMETHING";
+            return Base.NV;
         }
     }
 }
