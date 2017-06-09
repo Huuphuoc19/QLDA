@@ -114,11 +114,78 @@ namespace DAO
             {
                 conn.Open();
                 OracleCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "select * from da.NHANVIEN_VIEW";
+                cmd.CommandText = "select MANV, HONV, TENLOT, TENNV, PHAI, DIACHI, NGAYSINH, LUONG, PHUCAP from da.NHANVIEN_VIEW";
                 OracleDataReader reader = cmd.ExecuteReader();
                 tbl.Load(reader);
             }
             return tbl;
+        }
+
+        public static bool updateNhanVien(String[] array)
+        {
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = new OracleCommand("da.UpdateNhanvien_1a", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@NV_HONV", array[0]);
+                    cmd.Parameters.Add("@NV_TENLOT", array[1]);
+                    cmd.Parameters.Add("@NV_TENNV", array[2]);
+                    cmd.Parameters.Add("@NV_PHAI", array[3]);
+                    cmd.Parameters.Add("@NV_DIACHI", array[4]);
+                    DateTime t = DateTime.Parse(array[5]);
+          
+                    cmd.Parameters.Add("@NV_NGAYSINH", t);
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public static DataTable thongTinNVForNVPNS()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.NHANVIEN_VIEW_NS";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static bool updateThongTinNVPNS(String[] array)
+        {
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = new OracleCommand("da.UpdateNhanvien_NS", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@NV_MANV", array[0]);
+                    cmd.Parameters.Add("@NV_LUONG", array[1]);
+                    cmd.Parameters.Add("@NV_PHG", array[2]);
+                    cmd.Parameters.Add("@NV_PHUCAP", array[3]);
+                    
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
+            return false;
         }
     }
 }

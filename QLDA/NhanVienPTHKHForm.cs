@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QLDA
 {
-    public partial class NhanVienPTHKHForm : QLDA.NhanVienForm
+    public partial class NhanVienPTHKHForm : QLDA.BaseForm
     {
         public NhanVienPTHKHForm()
         {
