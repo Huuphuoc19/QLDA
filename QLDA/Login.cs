@@ -31,6 +31,8 @@ namespace QLDA
                 try
                 {
                     conn.Open();
+                    Global.Username = userName;
+                    Global.Password = password;
                     MessageBox.Show(NhanVien.getRoleNhanVien(userName));
                     switch (NhanVien.getRoleNhanVien(userName))
                     {

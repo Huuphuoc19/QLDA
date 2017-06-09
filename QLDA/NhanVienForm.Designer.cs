@@ -28,9 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gridThongTinNhanVien = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridThongTinNhanVien)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gridThongTinNhanVien
+            // 
+            this.gridThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridThongTinNhanVien.Location = new System.Drawing.Point(12, 93);
+            this.gridThongTinNhanVien.Name = "gridThongTinNhanVien";
+            this.gridThongTinNhanVien.Size = new System.Drawing.Size(710, 81);
+            this.gridThongTinNhanVien.TabIndex = 0;
+            // 
+            // NhanVienForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.gridThongTinNhanVien);
+            this.Name = "NhanVienForm";
+            this.Load += new System.EventHandler(this.NhanVienForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridThongTinNhanVien)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView gridThongTinNhanVien;
     }
 }

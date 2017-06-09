@@ -33,5 +33,10 @@ namespace DAO
                 daConnectionString = value;
             }
         }
+
+        public static string nvConnectionString(string username, string password)
+        {
+            return @"User Id=" + username + ";Password=" + password + ";Data Source=localhost:1521/orcl;";
+        }
     }
 }

@@ -106,5 +106,19 @@ namespace DAO
             }
             return Base.NV;
         }
+
+        public static DataTable getThongTinNhanVien()
+        {
+            DataTable tbl = new DataTable();    
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.NHANVIEN_VIEW";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
     }
 }
