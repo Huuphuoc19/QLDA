@@ -285,5 +285,63 @@ namespace DAO
             }
             return -1;
         }
+
+        public static DataTable getAllPhanCong()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.PhanCong";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static bool updateDuyet(string mada, string manv, string value)
+        {
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = @"update da.PhanCong 
+                                        set duyet = " + value + " where MANV = '" + manv + "' and MADA = '" + mada + "'";
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch(Exception ex)
+                {
+                    return false;
+                }
+               
+            }
+            return false;
+        }
+
+        public static bool updateThoiGianPC(string time, string mada, string manv)
+        {
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = @"update da.PhanCong 
+                                        set ThoiGian = TO_DATE('" + time + "', 'mm/dd/yyyy hh:mi:ss am') where MANV = '" + manv + "' and MADA = '" + mada + "'";
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
+            return false;
+        }
     }
 }
