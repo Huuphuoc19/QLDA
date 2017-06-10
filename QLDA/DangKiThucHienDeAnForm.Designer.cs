@@ -1,6 +1,6 @@
 ﻿namespace QLDA
 {
-    partial class NhanVienPTHDAForm
+    partial class DangKiThucHienDeAnForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,11 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dangKiThucHienDeAnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblNhanVien = new System.Windows.Forms.Label();
-            this.gridThongTinNhanVien = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridThongTinNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -46,7 +46,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(734, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nhanVienToolStripMenuItem
@@ -54,57 +54,59 @@
             this.nhanVienToolStripMenuItem.Name = "nhanVienToolStripMenuItem";
             this.nhanVienToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.nhanVienToolStripMenuItem.Text = "Nhan vien";
+            this.nhanVienToolStripMenuItem.Click += new System.EventHandler(this.nhanVienToolStripMenuItem_Click);
             // 
             // dangKiThucHienDeAnToolStripMenuItem
             // 
             this.dangKiThucHienDeAnToolStripMenuItem.Name = "dangKiThucHienDeAnToolStripMenuItem";
             this.dangKiThucHienDeAnToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
             this.dangKiThucHienDeAnToolStripMenuItem.Text = "Dang ki thuc hien de an";
-            this.dangKiThucHienDeAnToolStripMenuItem.Click += new System.EventHandler(this.dangKiThucHienDeAnToolStripMenuItem_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(181, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(190, 29);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(596, 231);
+            this.button1.Location = new System.Drawing.Point(401, 153);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 38);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Update";
+            this.button1.Size = new System.Drawing.Size(102, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Đăng kí";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblNhanVien
+            // dataGridView1
             // 
-            this.lblNhanVien.AutoSize = true;
-            this.lblNhanVien.Location = new System.Drawing.Point(286, 72);
-            this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(148, 21);
-            this.lblNhanVien.TabIndex = 5;
-            this.lblNhanVien.Text = "Thông tin nhân viên";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(107, 42);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(547, 51);
+            this.dataGridView1.TabIndex = 4;
             // 
-            // gridThongTinNhanVien
-            // 
-            this.gridThongTinNhanVien.AllowUserToAddRows = false;
-            this.gridThongTinNhanVien.AllowUserToDeleteRows = false;
-            this.gridThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridThongTinNhanVien.Location = new System.Drawing.Point(12, 129);
-            this.gridThongTinNhanVien.Name = "gridThongTinNhanVien";
-            this.gridThongTinNhanVien.Size = new System.Drawing.Size(710, 86);
-            this.gridThongTinNhanVien.TabIndex = 4;
-            // 
-            // NhanVienPTHDAForm
+            // DangKiThucHienDeAnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblNhanVien);
-            this.Controls.Add(this.gridThongTinNhanVien);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "NhanVienPTHDAForm";
-            this.Load += new System.EventHandler(this.NhanVienPTHDAForm_Load);
+            this.Name = "DangKiThucHienDeAnForm";
+            this.Load += new System.EventHandler(this.DangKiThucHienDeAnForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridThongTinNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,8 +117,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem nhanVienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dangKiThucHienDeAnToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblNhanVien;
-        private System.Windows.Forms.DataGridView gridThongTinNhanVien;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

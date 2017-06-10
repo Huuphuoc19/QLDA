@@ -229,5 +229,61 @@ namespace DAO
             }
             return tbl;
         }
+
+        public static DataTable getInfoThucHienDeAnNVPTHDA()
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = @"select da.MaDa, da.TenDA
+                                    from da.DeAn da
+                                    where da.MaDA not in ( select pc.MaDA from da.PhanCong pc where pc.ManV = user)";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static DataTable getDeAnById(String mada)
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                conn.Open();
+                OracleCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "select * from da.DeAn where MaDA = '" + mada + "'";
+                OracleDataReader reader = cmd.ExecuteReader();
+                tbl.Load(reader);
+            }
+            return tbl;
+        }
+
+        public static int insetPhanCong(String mada)
+        {
+            DataTable tbl = new DataTable();
+            using (OracleConnection conn = new OracleConnection(Base.nvConnectionString(Global.Username, Global.Password)))
+            {
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = new OracleCommand("da.INSERT_PHANCONG_1a", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@PC_MADA", mada);
+                    cmd.Parameters.Add("@RES", OracleDbType.Int32).Direction = ParameterDirection.Output;
+                    
+                    cmd.ExecuteNonQuery();
+
+                    int result = int.Parse(cmd.Parameters["@RES"].Value.ToString());
+                    return result;
+                }
+                catch(Exception ex)
+                {
+                    return -1 ;
+                }
+            }
+            return -1;
+        }
     }
 }
