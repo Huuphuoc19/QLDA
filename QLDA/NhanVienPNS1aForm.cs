@@ -64,5 +64,10 @@ namespace QLDA
             ThucHienDeAnForm thucHienDeAnForm = new ThucHienDeAnForm();
             thucHienDeAnForm.Show();
         }
+
+        private void nhanVienPNSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,7 +69,7 @@
             this.thucHienDeAnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(734, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1240, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,7 +129,7 @@
             this.dataGridView1.DataSource = this.nHANVIENVIEWNSBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(9, 113);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(713, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(1231, 303);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -240,7 +240,7 @@
             // NhanVienPNS1aForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.ClientSize = new System.Drawing.Size(734, 611);
+            this.ClientSize = new System.Drawing.Size(1240, 611);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);

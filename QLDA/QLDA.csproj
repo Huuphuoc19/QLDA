@@ -107,6 +107,24 @@
     <Compile Include="DbaForm.Designer.cs">
       <DependentUpon>DbaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbaForm1a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbaForm1a.Designer.cs">
+      <DependentUpon>DbaForm1a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbaForm2a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbaForm2a.Designer.cs">
+      <DependentUpon>DbaForm2a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbaForm3a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbaForm3a.Designer.cs">
+      <DependentUpon>DbaForm3a.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiamDocForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,11 +208,29 @@
     <EmbeddedResource Include="DangKiThucHienDeAnForm.resx">
       <DependentUpon>DangKiThucHienDeAnForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DbaForm.resx">
+      <DependentUpon>DbaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbaForm1a.resx">
+      <DependentUpon>DbaForm1a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbaForm2a.resx">
+      <DependentUpon>DbaForm2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbaForm3a.resx">
+      <DependentUpon>DbaForm3a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiamDocForm.resx">
+      <DependentUpon>GiamDocForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienForm.resx">
       <DependentUpon>NhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienPKDForm.resx">
+      <DependentUpon>NhanVienPKDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienPNS1aForm.resx">
       <DependentUpon>NhanVienPNS1aForm.cs</DependentUpon>
@@ -204,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienPTHDAForm.resx">
       <DependentUpon>NhanVienPTHDAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienPTHKHForm.resx">
+      <DependentUpon>NhanVienPTHKHForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

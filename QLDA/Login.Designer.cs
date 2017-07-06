@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(224, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 21);
+            this.label1.Size = new System.Drawing.Size(76, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Password";
             // 
@@ -66,6 +66,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(296, 29);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // button1
             // 
